@@ -1,4 +1,4 @@
-export interface Customer{
+export interface CustomerDeatailsDto{
     customerId:number;
     firstName:string;
     lastName:string;
