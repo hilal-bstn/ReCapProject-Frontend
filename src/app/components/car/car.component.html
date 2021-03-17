@@ -1,6 +1,7 @@
 <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
     <span class="visually-hidden">Loading...</span>
 </div>
+<div>
 <table *ngIf="dataLoaded!=false" class="table">
     <thead>
         <tr>
@@ -10,10 +11,13 @@
             <th>Günlük Ücret</th>
         </tr>
     </thead>
-    <tr *ngFor="let car of carsDetails">
+    <tbody>
+    <tr routerLink="/cars/car-detail/{{car.carId}}" *ngFor="let car of carsDetails">
         <td>{{car.brandName}}</td>
         <td>{{car.colorName}}</td>
         <td>{{car.description}}</td>
-        <td>{{car.dailyPrice}}</td>
-    </tr>   
+        <td>{{car.dailyPrice}} TL</td>
+    </tr>
+ </tbody>  
 </table>
+</div>

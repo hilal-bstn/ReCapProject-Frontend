@@ -4,7 +4,6 @@
 <table *ngIf="dataLoaded!=false" class="table">
     <thead>
         <tr>
-            <th>Id</th>
             <th>Ad</th>
             <th>Soyad</th>
             <th>Araç Markası</th>
@@ -15,12 +14,11 @@
         </tr>
     </thead>
     <tr *ngFor="let rental of rentalsDetails">
-        <td>{{rental.id}}</td>
         <td>{{rental.firstName}}</td>
         <td>{{rental.lastName}}</td>
         <td>{{rental.brandName}}</td>
         <td>{{rental.dailyPrice}} TL</td>
-        <td>{{rental.rentDate}}</td>
-        <td>{{rental.returnDate}}</td>
+        <td>{{rental.rentDate | date: 'dd/MM/yyyy hh:mm a'}}</td>
+        <td>{{rental.returnDate| date: 'dd/MM/yyyy hh:mm a'}}</td>
     </tr>   
 </table>

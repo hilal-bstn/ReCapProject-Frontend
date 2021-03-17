@@ -1,0 +1,48 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<div *ngIf="dataLoaded==true" class="card mb-3">
+  <div *ngFor="let car of carDetails" class="card-header text-center">
+    <strong>
+        {{car.brandName}} - {{car.modelYear | date: 'yyyy'}}
+    </strong> 
+  </div>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div align="center" *ngFor="let carImage of carImages let i = index"  [class]="getSliderClassName(i)">
+       <img src="{{apiUrl}}/Images/{{ carImage.imagePath }}" class="h-25 d-inline-block" style="width: 300px; height: 500px;" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<div>
+  <table *ngIf="dataLoaded==true" class="table">
+    <thead>
+        <tr>
+          <th>Model Yılı</th>
+            <th>Marka İsmi</th>
+            <th>Rengi</th>
+            <th>Açıklama</th>
+            <th>Günlük Ücret</th>
+        </tr>
+    </thead>
+<tbody>
+<tr *ngFor="let car of carDetails">
+  <td>{{car.modelYear | date: 'yyyy'}}</td>
+    <td>{{car.brandName}}</td>
+    <td>{{car.colorName}}</td>
+    <td>{{car.description}}</td>
+    <td>{{car.dailyPrice}} TL</td>
+</tr>
+</tbody>  
+</table>
+</div>
+<button class="btn btn-outline-success" type="submit">Kirala</button>
+
