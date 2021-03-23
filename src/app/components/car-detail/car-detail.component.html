@@ -39,10 +39,14 @@
     <td>{{car.brandName}}</td>
     <td>{{car.colorName}}</td>
     <td>{{car.description}}</td>
-    <td>{{car.dailyPrice}} TL</td>
+    <td>{{car.dailyPrice}} TL </td><br>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button routerLink="/rentals/{{car.carId}}" class="btn btn-primary me-md-2" type="button">Kirala</button>
+      </div>
 </tr>
 </tbody>  
 </table>
 </div>
-<button class="btn btn-outline-success" type="submit">Kirala</button>
+
+
 

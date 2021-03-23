@@ -1,23 +1,37 @@
 <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
     <span class="visually-hidden">Loading...</span>
 </div>
+ <div class="mb-3">
+    <label for="fltrBrand" class="form-label">Marka İsmi</label>
+    <input type="text" [(ngModel)]="fltrBrand" class="form-control" id="fltrBrand" 
+    placeholder="marka ismi giriniz">
+  </div>
+  <div *ngIf="fltrBrand.length>2" class="alert alert-success">
+    {{fltrBrand}} aradınız.
+  </div>
 <div>
-<table *ngIf="dataLoaded!=false" class="table">
-    <thead>
-        <tr>
-            <th>Marka İsmi</th>
-            <th>Rengi</th>
-            <th>Açıklama</th>
-            <th>Günlük Ücret</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr routerLink="/cars/car-detail/{{car.carId}}" *ngFor="let car of carsDetails">
-        <td>{{car.brandName}}</td>
-        <td>{{car.colorName}}</td>
-        <td>{{car.description}}</td>
-        <td>{{car.dailyPrice}} TL</td>
-    </tr>
- </tbody>  
-</table>
+<div class="mb-3">
+        <label for="fltrColor" class="form-label">Renk İsmi</label>
+        <input type="text" [(ngModel)]="fltrColor" class="form-control" id="fltrColor" 
+        placeholder="renk ismi giriniz">
+      </div>
+      <div *ngIf="fltrColor.length>2" class="alert alert-success">
+        {{fltrColor}} aradınız.
+      </div>
+      
+<div *ngFor="let car of carsDetails|filterBrand:fltrBrand"  class="card text-dark bg-light mb-3" >
+  <div   class="card-header">
+    <strong>
+      {{car.brandName}} - {{car.modelYear | date: 'yyyy'}}
+  </strong> 
+  </div >
+  <div class="card-body" >
+    <h5 class="card-title"></h5>
+    <img   src="{{apiUrl}}/Images/default.png" class="h-25 d-inline-block" style="width: 100px; height: 150px;" alt="...">
+   {{car.description}} <br> <br><b>Günlük ücret:</b> {{car.dailyPrice}} TL   <br>    
+   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button routerLink="/cars/car-detail/{{car.carId}}" class="btn btn-primary me-md-2" type="button">Detaylar</button>
+    
+  </div>
+  </div>
 </div>

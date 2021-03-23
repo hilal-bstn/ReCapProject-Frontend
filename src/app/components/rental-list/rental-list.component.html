@@ -1,0 +1,25 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<table *ngIf="dataLoaded!=false" class="table">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Araç Markası</th>
+            <th>Ücret</th>
+            <th>Kiranlama Tarihi</th>
+            <th>Teslim Tarihi</th>
+
+        </tr>
+    </thead>
+    <tr *ngFor="let rental of rentalsDetails">
+        <td>{{rental.firstName}}</td>
+        <td>{{rental.lastName}}</td>
+        <td>{{rental.brandName}}</td>
+        <td>{{rental.dailyPrice}} TL</td>
+        <td>{{rental.rentDate | date: 'dd/MM/yyyy hh:mm a'}}</td>
+        <td>{{rental.returnDate| date: 'dd/MM/yyyy hh:mm a'}}</td>
+    </tr>   
+</table>
+

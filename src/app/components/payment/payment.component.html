@@ -1,0 +1,45 @@
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active"><a href="/rentals">1. Aşama</a></li>
+      <li class="breadcrumb-item " aria-current="page">2. Aşama</li>
+    </ol>
+  </nav>
+  <div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Ödeme</h5></div>
+            <div class="card-body">
+                <form [formGroup]="paymentAddForm">
+                    
+                  <div class="mb-3">
+                    <label for="cardNumber">Kart Numarası</label>
+                    <div class="form-group">
+                        <input type="text" 
+                        
+                        id="cardNumber" 
+                        formControlName="cardNumber" class="form-control" 
+                        placeholder="Kart Numarası"/>
+                    </div>
+                </div>
+                    <div class="mb-3">
+                        <label for="cvv">Cvv</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="cvv" 
+                            formControlName="cvv" class="form-control" 
+                            placeholder="Cvv"
+                            />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="mb-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" (click)="add()" routerLink="/cars">Onayla</button>
+            </div></div>
+            
+        </div>
+        
+    </div>
+    
+  </div>

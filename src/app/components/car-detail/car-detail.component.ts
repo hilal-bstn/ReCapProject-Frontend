@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { CarDetailsDto } from 'src/app/models/carDetailsDto';
 import { CarImage } from 'src/app/models/car_image';
 import { CarService } from 'src/app/services/car.service';
@@ -42,7 +43,6 @@ getCarDetailsByCarId(carId:Number){
   this.carimageService.getCarDetailsByCarId(carId).subscribe(response=>{
     this.carDetails=response.data;
     this.dataLoaded=true;
-
   });}
   getSliderClassName(index:number){
     if(index == 0){
