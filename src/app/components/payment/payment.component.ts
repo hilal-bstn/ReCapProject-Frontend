@@ -40,9 +40,14 @@ export class PaymentComponent implements OnInit {
   {
     let paymentModel = Object.assign({},this.paymentAddForm.value)
     this.paymentService.add(paymentModel).subscribe(response=>{
-      this.dataLoaded=true
-      this.toastrService.success("Ödeme İşlemi tamamlandı")
-      this.toastrService.success("Ana sayfaya yönlendiriliyorusunuz..")
+      this.toastrService.success(response.message,"Başarılı")
+    },responseError=>{
+      if(responseError.error.Errors.length>0){
+        for (let i = 0; i <responseError.error.Errors.length; i++) {
+          this.toastrService.error(responseError.error.Errors[i].ErrorMessage
+            ,"Doğrulama hatası")
+        }       
+      } 
     })}
   
     

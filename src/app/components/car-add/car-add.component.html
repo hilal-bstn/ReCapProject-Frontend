@@ -1,0 +1,57 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Araç Ekle</h5></div>
+            <div class="card-body">
+                
+                <form  [formGroup]="carAddForm">
+                    <div class="mb-3">
+                    <label><b>Araç Markası:&emsp;</b></label>
+                    <select formControlName="brandId" class="form-select" aria-label="Default select example" name="brand" id="brand">
+                        <option *ngFor="let brand of brands" 
+                        [ngValue]="brand.brandId">{{brand.brandName}}</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label><b>Araç Rengi:&emsp;</b></label>
+                      <select formControlName="colorId" class="form-select" aria-label="Default select example" name="color" id="color">
+                        <option *ngFor="let color of colors" [ngValue]="color.colorId" >{{color.colorName}}</option>
+                      </select></div>
+                    <div class="mb-3">
+                        <label for="modelYear">Model Yılı</label>
+                        <div class="form-group">
+                            <input type="date" 
+                            id="modelYear" 
+                            formControlName="modelYear" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dailyPrice">Günlük Ücret</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="dailyPrice" 
+                            formControlName="dailyPrice" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description">Açıklama</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="description" 
+                            formControlName="description" class="form-control" />
+                        </div>
+                    </div>
+                 
+                </form>
+            </div>
+            <div class="mb-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" (click)="add()">Araç Ekle</button><br>
+                <button routerLink="/cars">Vazgeç</button>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    
+  </div>
