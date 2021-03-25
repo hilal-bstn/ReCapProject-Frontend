@@ -256,10 +256,10 @@ Angular kullanarak oluşturduğumuz front-end kısmında Models, Services, Compo
 
 ## Pipes
 
-<b>Pipes klasörümüzle, sayfamızda gösterdiğimiz datalara filtreler oluşturabiliyoruz. 
+<b>Pipes klasörümüzle, sayfamızda gösterdiğimiz datalara filtreler oluşturabiliyoruz. <br>
 
 <tr>
-        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/pipes">Pipes</a>
+        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/pipes">Pipes</a><br>
                                 <ul type="circle">
   <td>&#128206;<ins>Alt kısımdaki filter-brand.pipe dosyamız araç listemizde bulanan marka kısmına göre, text kutumuza girilen karakterlere uygun sonuçların listelenmesini sağlar.  </ins> <br><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/pipes/filter-brand.pipe.ts">filter-brand.pipe.ts</a><br><br>
