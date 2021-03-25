@@ -69,9 +69,9 @@ Angular kullanarak oluşturduğumuz front-end kısmında Models, Services, Compo
                <ul type="circle">
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brand">brand</a><br>
             <ul type="circle">
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brand-add/brand.component.css">brand.component.css</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brand-add/brand.component.html">brand.component.html</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brand-add/brand.component.ts">brand.component.ts</a><br><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brand/brand.component.css">brand.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brand/brand.component.html">brand.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brand/brand.component.ts">brand.component.ts</a><br><br>
 				<td>&#128205; <em>Çıktısı: <br>
               
  ![brand](https://user-images.githubusercontent.com/77468985/112490220-3d688880-8d90-11eb-9d44-9c348ae73a36.png) <br>
