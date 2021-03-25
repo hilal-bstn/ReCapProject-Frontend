@@ -5,7 +5,7 @@
 
 <b>ReCapProject, SOLID prensiplerine bağlı kalınarak ve N-Katmalı mimari yapısıyla C# programlama diline ait; henüz geliştirilme aşamasında olan bir araç kiralama projesidir. Şu anda projenin Angular teknolojisi kullanılarak oluşturulmuş front-end kısmını incelemektesiniz.
   
-<td>&#128206;<ins><b>Projenin back-end kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md" target="_blank">buradan</a> ulaşabilirsiniz.</ins><br><br>
+<td>&#128206;<ins><b>Projenin back-end kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md">buradan</a> ulaşabilirsiniz.</ins><br><br>
    
 <ul type="circle">
 					<td>&#128230;<ins><b>Projeye entegre edilen modüller(node_modules)</b></ins>
