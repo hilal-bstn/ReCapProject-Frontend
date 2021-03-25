@@ -5,7 +5,7 @@
 
 <b>ReCapProject, SOLID prensiplerine bağlı kalınarak ve N-Katmalı mimari yapısıyla C# programlama diline ait; henüz geliştirilme aşamasında olan bir araç kiralama projesidir. Şu anda projenin Angular teknolojisi kullanılarak oluşturulmuş front-end kısmını incelemektesiniz.
   
-<td>&#128206;<ins><b>Projenin back-end kısmına <a href="https://github.com/hilal-bstn/ReCapProject">buradan</a> ulaşabilirsiniz.</ins><br>
+<td>&#128206;<ins><b>Projenin back-end kısmına <a href="https://github.com/hilal-bstn/ReCapProject">buradan</a> ulaşabilirsiniz.</ins><br><br>
    
 <ul type="circle">
 					<td>&#128230;<ins><b>Projeye entegre edilen modüller(node_modules)</b></ins>
@@ -261,10 +261,10 @@ Angular kullanarak oluşturduğumuz front-end kısmında Models, Services, Compo
 <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/pipes">Pipes</a>
                                 <ul type="circle">
-  <td>&#128206;<ins>Alt kısımdaki filter-brand.pipe dosyamız araç listemizde bulanan marka kısmına göre, text kutumuza girilen karakterlere uygun sonuçların listelenmesini sağlar.  </ins> <br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/pipes/filter-brand.pipe.ts">filter-brand.pipe.ts</a><br>
+  <td>&#128206;<ins>Alt kısımdaki filter-brand.pipe dosyamız araç listemizde bulanan marka kısmına göre, text kutumuza girilen karakterlere uygun sonuçların listelenmesini sağlar.  </ins> <br><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/pipes/filter-brand.pipe.ts">filter-brand.pipe.ts</a><br><br>
           
-   <td>&#128206;<ins>Alt kısımdaki filter-color.pipe dosyamız araç listemizde bulanan renk kısmına göre, text kutumuza girilen karakterlere uygun sonuçların listelenmesini sağlar.  </ins> <br>
+   <td>&#128206;<ins>Alt kısımdaki filter-color.pipe dosyamız araç listemizde bulanan renk kısmına göre, text kutumuza girilen karakterlere uygun sonuçların listelenmesini sağlar.  </ins> <br><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/pipes/filter-color.pipe.ts">filter-color.pipe.ts</a><br>
 				</ul>
   </li>
