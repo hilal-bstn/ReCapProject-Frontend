@@ -8,9 +8,13 @@ import { CarUpdateComponent } from './components/car-update/car-update.component
 import { CarComponent } from './components/car/car.component';
 import { ColorAddComponent } from './components/color-add/color-add.component';
 import { ColorUpdateComponent } from './components/color-update/color-update.component';
+import { CustomerComponent } from './components/customer/customer.component';
+import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { RegisterComponent } from './components/register/register.component';
 import { RentalListComponent } from './components/rental-list/rental-list.component';
 import { RentalComponent } from './components/rental/rental.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path:"",component:CarComponent},
@@ -19,7 +23,7 @@ const routes: Routes = [
   {path:"cars/color/:colorId",component:CarComponent},
   {path:"cars/car-detail/:carId",component:CarDetailComponent},
   {path:"cars/:brandId/:colorId",component:CarComponent},
-  {path:"rentals/:carId",component:RentalComponent},
+  {path:"rentals/:carId",component:RentalComponent, canActivate:[AuthGuard]},
   {path:"rentals-list",component:RentalListComponent},
   {path:"payment/:dailyPrice",component:PaymentComponent},
   {path:"brand-add",component:BrandAddComponent},
@@ -28,6 +32,9 @@ const routes: Routes = [
   {path:"car-update/:Id",component:CarUpdateComponent},
   {path:"brand-update/:brandId",component:BrandUpdateComponent},
   {path:"color-update/:colorId",component:ColorUpdateComponent},
+  {path:"customers",component:CustomerComponent},
+  {path:"register",component:RegisterComponent},
+  {path:"login", component:LoginComponent}
  
 ];
 

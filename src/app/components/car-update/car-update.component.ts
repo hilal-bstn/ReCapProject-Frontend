@@ -19,6 +19,7 @@ export class CarUpdateComponent implements OnInit {
   carUpdateForm : FormGroup;
   car:Car[]=[];
   carDetails:CarDetailsDto[]=[];
+  car2:CarDetailsDto;
   brands:Brand[]=[];
   colors:Color[]=[];
   SelectBrand:number;

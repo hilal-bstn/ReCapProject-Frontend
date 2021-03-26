@@ -27,7 +27,7 @@
                   </tbody>  
                   </table>
                   </div>
-                <form  [formGroup]="carUpdateForm">
+                <form  [formGroup]="carUpdateForm" *ngFor="let car of carDetails">
                     <div class="mb-3">
                     <label><b>Araç Markası:&emsp;</b></label>
                     <select formControlName="brandId" class="form-select" aria-label="Default select example" name="brand" id="brand">
@@ -37,13 +37,13 @@
                     </div>
                     <div class="mb-3">
                       <label><b>Araç Rengi:&emsp;</b></label>
-                      <select formControlName="colorId" class="form-select" aria-label="Default select example" name="color" id="color">
-                        <option *ngFor="let color of colors" [ngValue]="color.colorId" >{{color.colorName}}</option>
+                      <select formControlName="colorId"  class="form-select" aria-label="Default select example" name="color" id="color">
+                        <option *ngFor="let color of colors"  [ngValue]="color.colorId">{{color.colorName}}</option>
                       </select></div>
                     <div class="mb-3">
                         <label for="modelYear">Model Yılı</label>
                         <div class="form-group">
-                            <input type="date" 
+                            <input type="date" [value]="car.modelYear"
                             id="modelYear" 
                             formControlName="modelYear" class="form-control" />
                         </div>
@@ -51,15 +51,15 @@
                     <div class="mb-3">
                         <label for="dailyPrice">Günlük Ücret</label>
                         <div class="form-group">
-                            <input type="number" 
+                            <input type="number" [value]="car.dailyPrice"
                             id="dailyPrice" 
-                            formControlName="dailyPrice" class="form-control" />
+                            formControlName="dailyPrice" class="form-control"  />
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="description">Açıklama</label>
                         <div class="form-group">
-                            <input type="text" 
+                            <input type="text" [value]="car.description"
                             id="description" 
                             formControlName="description" class="form-control" />
                         </div>
