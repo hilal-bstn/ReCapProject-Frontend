@@ -16,7 +16,7 @@
 					</ul>
 					</ul>
 
-<b>Angular kullanarak oluşturduğumuz front-end kısmında Models, Services, Components, Pipes klasörlerimiz bulunmaktadır. Bu klasörleri yakından inceleyelim:
+<b>Angular kullanarak oluşturduğumuz front-end kısmında Models, Services, Components, Pipes,Guards ve Interceptors klasörlerimiz bulunmaktadır. Bu klasörleri yakından inceleyelim:
 
 ## Models
 
@@ -35,7 +35,11 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/rental.ts">rental.ts</a><br>
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/rentalDetailsDto.ts">rentalDetailsDto.ts</a><br>
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/responseModel.ts">responseModel.ts</a><br>
-				</ul>
+          <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/singleResponseModel.ts">singleResponseModel.ts</a><br>
+          <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/tokenModel.ts">tokenModel.ts</a><br>
+          <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/loginModel.ts">loginModel.ts</a><br>
+
+   </ul>
   </li>
 			
 </ul>		
@@ -47,6 +51,7 @@
 <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/services">Services</a>
                                 <ul type="circle">
+  					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/services/auth.service.ts">auth.service.ts</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/services/brand.service.ts">brand.service.ts</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/services/car.service.ts">car.service.ts</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/services/carimage.service.ts">carimage.service.ts</a><br>
@@ -67,6 +72,16 @@
   <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components">Components</a>
                <ul type="circle">
+  <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/login">login</a><br>
+            <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/login/login.component.css">login.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/login/login.component.html">login.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/login/login.component.ts">login.component.ts</a><br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+ ![login](https://user-images.githubusercontent.com/77468985/112689513-79ccdf00-8e8b-11eb-8439-a3d3a8e710c5.png)
+![login2](https://user-images.githubusercontent.com/77468985/112690335-a6cdc180-8e8c-11eb-8af9-41e0187a12b6.png)
+        </ul>
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brand">brand</a><br>
             <ul type="circle">
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brand/brand.component.css">brand.component.css</a><br>
@@ -270,4 +285,42 @@
   </li>
 			
 </ul>		
+
+## Guards
+
+<b> Aşağıdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
+
+<tr>
+        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/guard">Guard</a><br>
+                                <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/guard/auth.guard.ts">auth.guard.ts</a>
+             <br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+![guard1](https://user-images.githubusercontent.com/77468985/112691176-f9f44400-8e8d-11eb-92ad-519d7830394e.png)
+
+ <br>	
+				</ul>
+  </li>
+			
+</ul>	
+
+## Interceptors
+
+<b> Aşağıdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
+
+<tr>
+        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/interceptors">Interceptors</a><br>
+                                <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/interceptors/auth.interceptor.ts">auth.interceptor.ts</a>
+             <br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+![token](https://user-images.githubusercontent.com/77468985/112691864-ff9e5980-8e8e-11eb-87bf-044da4a5deb0.png)
+
+ <br>	
+				</ul>
+  </li>
+			
+</ul>	
 
