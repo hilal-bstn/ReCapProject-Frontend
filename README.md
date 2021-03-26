@@ -3,7 +3,7 @@
 ![](https://user-images.githubusercontent.com/77468985/108639180-479f1a80-74a4-11eb-9e9b-8bd51907e836.png) 
 #
 
-<b>ReCapProject, SOLID prensiplerine bağlı kalınarak ve N-Katmalı mimari yapısıyla C# programlama diline ait; henüz geliştirilme aşamasında olan bir araç kiralama projesidir. Şu anda projenin Angular teknolojisi kullanılarak oluşturulmuş front-end kısmını incelemektesiniz.
+<b>ReCapProject, SOLID prensiplerine bağlı kalınarak ve N-Katmalı mimari yapısıyla C# programlama diline ait; henüz geliştirilme aşamasında olan bir araç kiralama projesidir. Şu anda projenin Angular kullanılarak oluşturulmuş front-end kısmını incelemektesiniz.
   
 <td>&#128206;<ins><b>Projenin back-end kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md">buradan</a> ulaşabilirsiniz.</ins><br><br>
    
@@ -16,7 +16,7 @@
 					</ul>
 					</ul>
 
-Angular kullanarak oluşturduğumuz front-end kısmında Models, Services, Components, Pipes klasörlerimiz bulunmaktadır. Bu klasörleri yakından inceleyelim:
+<b>Angular kullanarak oluşturduğumuz front-end kısmında Models, Services, Components, Pipes klasörlerimiz bulunmaktadır. Bu klasörleri yakından inceleyelim:
 
 ## Models
 
