@@ -196,9 +196,9 @@
 				</ul>
         <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/car-update">car-update</a><br>
             <ul type="circle">
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/car-update/car-update.component.css">car-filter.component.css</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/car-update/car-update.component.html">car-filter.component.html</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/car-update/car-update.component.ts">car-filter.component.ts</a><br><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/car-update/car-update.component.css">car-update.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/car-update/car-update.component.html">car-update.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/car-update/car-update.component.ts">car-update.component.ts</a><br><br>
 				<td>&#128205; <em>Çıktısı: <br>
               
 ![car-update](https://user-images.githubusercontent.com/77468985/112526438-fd66cd00-8db2-11eb-8c7f-5496c91b6d62.png)
