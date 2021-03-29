@@ -3,7 +3,7 @@
       <li class="breadcrumb-item active" aria-current="page"><a routerLink="/rentals">1. Aşama</a></li>
     </ol>
   </nav>
-<div class="content">
+<!--<div class="content">
   <div class="col-md-12">
       <div class="card">
           <div class="card-header"><h5 class="title">Kirala</h5></div>
@@ -64,4 +64,84 @@
       
   </div>
   
-</div>
+</div> -->
+<body class="bg">
+    
+  <div class="container">
+    <main>
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-primary">Araç Kiralama Bilgileri</span>
+      </h4>
+      <div class="row g-5" *ngFor="let car of carDetails" >
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Araç Bilgileri</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Model Yılı</h6>
+                <small class="text-muted">{{car.modelYear| date: 'yyyy'}}</small>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Araç Markası</h6>
+                <small class="text-muted">{{car.brandName}}</small>
+              </div>
+             
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Günlük Ücret (TL)</span>
+              <strong>{{car.dailyPrice}}</strong>
+            </li>
+          </ul>
+  
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <form class="needs-validation" novalidate>
+            <form *ngFor="let car of carDetails" [formGroup]="rentalAddForm">
+               
+              <div class="mb-3">
+                  <label for="customerId"><b>Müşteri Id</b></label>
+                  <div class="form-group">
+                      <input type="number" 
+                      id="customerId" 
+                      formControlName="customerId" class="form-control" 
+                      placeholder="Müşteri Id" />
+                  </div>
+              </div>
+             
+              <div class="mb-3">
+                  <label for="rentDate"><b>Kiralama Tarihi</b></label>
+                  <div class="form-group">
+                      <input type="date" 
+                      id="rentDate" 
+                      formControlName="rentDate" class="form-control" 
+                      placeholder="Kiralama Tarihi"/>
+                  </div>
+              </div>
+              <div class="mb-3">
+                <label for="rentDate"><b>Teslim Tarihi</b></label>
+                <div class="form-group">
+                    <input type="date" 
+                    id="returnDate" 
+                    formControlName="returnDate" class="form-control" 
+                    placeholder="Teslim Tarihi"/>
+                </div>
+            </div>
+           
+              
+         
+    
+          </form>
+            <hr class="my-4">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" *ngFor="let car of carDetails">
+            <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="add()">Devam Et</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  
+  </div>

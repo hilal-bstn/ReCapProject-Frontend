@@ -46,7 +46,7 @@ export class CarComponent implements OnInit {
         this.getCarsDetails();
         
       }
-      this.getCarImagesByCarId(params["carId"])
+
     })
   }
   getCarsDetails(){
@@ -75,16 +75,6 @@ export class CarComponent implements OnInit {
            this.dataLoaded=true;
          });
        }
-       getCarImagesByCarId(carId:Number){
-        
-        this.carimageService.getCarImagesByCarId(carId).subscribe(response=>{
-          this.carImages=response.data;
-          this.dataLoaded=true;
-         
-    
-        });
-        
-    }
     
     
 }

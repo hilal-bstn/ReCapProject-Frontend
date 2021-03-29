@@ -23,9 +23,9 @@ const routes: Routes = [
   {path:"cars/color/:colorId",component:CarComponent},
   {path:"cars/car-detail/:carId",component:CarDetailComponent},
   {path:"cars/:brandId/:colorId",component:CarComponent},
-  {path:"rentals/:carId",component:RentalComponent, canActivate:[AuthGuard]},
+  {path:"rentals/:carId/:dailyPrice",component:RentalComponent, canActivate:[AuthGuard]},
   {path:"rentals-list",component:RentalListComponent},
-  {path:"payment/:dailyPrice",component:PaymentComponent},
+  {path:"payment/:dailyPrice/:rentDate/:returnDate",component:PaymentComponent},
   {path:"brand-add",component:BrandAddComponent},
   {path:"color-add",component:ColorAddComponent},
   {path:"car-add",component:CarAddComponent},
@@ -34,7 +34,8 @@ const routes: Routes = [
   {path:"color-update/:colorId",component:ColorUpdateComponent},
   {path:"customers",component:CustomerComponent},
   {path:"register",component:RegisterComponent},
-  {path:"login", component:LoginComponent}
+  {path:"login", component:LoginComponent},
+
  
 ];
 

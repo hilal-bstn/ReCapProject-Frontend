@@ -1,0 +1,64 @@
+<div class="content">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header"><h5 class="title">Kayıt Ol</h5></div>
+          <div class="card-body">
+<body class="text-center">
+    <main class="form-register">
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="mb-3">
+        <div class="form-floating">
+            <input
+              formControlName="firstName"
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder="İsim"
+            />
+            <label for="floatingInput">İsim</label>
+          </div>
+        </div>
+        <div class="mb-3">
+        <div class="form-floating">
+          <input
+            formControlName="lastName"
+            type="text"
+            class="form-control"
+            id="lastName"
+            placeholder="Soyisim"
+          />
+          <label for="floatingInput">Soyisim</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="form-floating">
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">E-posta</label>
+          </div>
+        </div>
+        <div class="mb-3">
+        <div class="form-floating">
+          <input
+          formControlName="password"
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Şifre"
+          />
+          <label for="floatingPassword">Parola</label>
+        </div>
+        </div>
+       
+        <button class="w-100 btn btn-lg btn-primary">
+         Kayıt Ol
+        </button>
+      </form>
+    </main>
+  </body>
+  </div></div></div></div>

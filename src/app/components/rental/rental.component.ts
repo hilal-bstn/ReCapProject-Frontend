@@ -16,47 +16,59 @@ export class RentalComponent implements OnInit {
    carDetails:CarDetailsDto[]=[];
    car:CarDetailsDto;
    carId1:number;
+   amount:number=0;
+   dailyPrice:number;
   constructor(private formBuilder:FormBuilder,
     private rentalService:RentalService,
     private toastrService:ToastrService,
     private activatedRoute:ActivatedRoute,
     private carimageService:CarimageService,
+    private router:Router
     ) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params=>{
-      if(params["carId"])
+      if(params["carId"]&&params["dailyPrice"])
       {  
         this.carId1=parseInt(params["carId"]);
-         this.getCarDetailsByCarId(params["carId"])
-         
-      }
+        this.getCarDetailsByCarId(params["carId"]) ;
+        this.dailyPrice=parseInt(params["dailyPrice"]);
+     }
     this.createrentalAddForm();
   })
   
 }
+
   createrentalAddForm(){
     this.rentalAddForm = this.formBuilder.group({
       carId: [this.carId1],
       customerId: ["",Validators.required],
       rentDate:["", Validators.required],
+      returnDate:["",Validators.required]
     })
     
-    console.log(this.rentalAddForm)
  }
+ 
+ getCarDetailsByCarId(carId:Number){
+  this.carimageService.getCarDetailsByCarId(carId).subscribe(response=>{
+    this.carDetails=response.data;
+  });}
+  GetTotalDays(firstDate:Date, lastDate:Date) 
+{
+   return Math.round((lastDate.getTime()- firstDate.getTime()) / (1000 * 60 * 60 * 24));  
+}
  add(){
   if(this.rentalAddForm.valid)
-  {
+  { 
     let rentalModel = Object.assign({},this.rentalAddForm.value)
     this.rentalService.add(rentalModel).subscribe(response=>{
-      this.toastrService.success(response.message,"Başarılı")
+      this.toastrService.success("Araç girdiğiniz tarihlerde uygun")
+      this.toastrService.info("Ödeme Sayfasına Yönlendiriliyorsunuz..")
+     // this.amount=this.GetTotalDays(rentalModel.rentDate,rentalModel.returnDate)*this.car.dailyPrice
+      this.router.navigate(["payment",this.dailyPrice,rentalModel.rentDate,rentalModel.returnDate])
     },responseError=>{
-      if(responseError.error.Errors.length>0){
-        for (let i = 0; i <responseError.error.Errors.length; i++) 
-        {
-          this.toastrService.error(responseError.error.Errors[i].ErrorMessage,"Doğrulama hatası")
-        }       
-      } 
+      this.toastrService.error(responseError.error);
+      
     })}
   
     
@@ -64,9 +76,5 @@ export class RentalComponent implements OnInit {
     this.toastrService.error("Formunuz eksik","Dikkat")
   }
  }
- getCarDetailsByCarId(carId:Number){
-  this.carimageService.getCarDetailsByCarId(carId).subscribe(response=>{
-    this.carDetails=response.data;
-  });}
- }
+}
 

@@ -4,42 +4,72 @@
       <li class="breadcrumb-item " aria-current="page">2. Aşama</li>
     </ol>
   </nav>
-  <div class="content">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header"><h5 class="title">Ödeme</h5></div>
-            <div class="card-body">
-                <form [formGroup]="paymentAddForm">
-                    
-                  <div class="mb-3">
-                    <label for="cardNumber">Kart Numarası</label>
-                    <div class="form-group">
-                        <input type="text" 
-                        
-                        id="cardNumber" 
-                        formControlName="cardNumber" class="form-control" 
-                        placeholder="Kart Numarası"/>
-                    </div>
-                </div>
-                    <div class="mb-3">
-                        <label for="cvv">Cvv</label>
-                        <div class="form-group">
-                            <input type="text" 
-                            id="cvv" 
-                            formControlName="cvv" class="form-control" 
-                            placeholder="Cvv"
-                            />
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="mb-3">
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" (click)="add()" routerLink="/cars">Onayla</button>
-            </div></div>
-            
-        </div>
-        
-    </div>
+
+  <body class="bg">
     
-  </div>
+    <div class="container">
+      <main>
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Ödeme İşlemi</span>
+          </h4>
+        <div class="row g-5" >
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary">Kiralama Bilgileri</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Kiralama Tarihi</h6>
+                  <small class="text-muted">{{rentDate}}</small>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Teslim Tarihi</h6>
+                  <small class="text-muted">{{returnDate}}</small>
+                </div>
+               
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Toplam Ücret (TL)</span>
+                <strong>{{amount}}</strong>
+              </li>
+            </ul>
+    
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <form class="needs-validation" novalidate>
+                <form [formGroup]="paymentAddForm">
+                    <div class="mb-3">
+                      <label for="cardNumber"><b>Kart Numarası</b></label>
+                      <div class="form-group">
+                          <input type="text" 
+                          id="cardNumber" 
+                          formControlName="cardNumber" class="form-control" 
+                          placeholder="Kart Numarası"/>
+                      </div>
+                  </div>
+                      <div class="mb-3">
+                          <label for="cvv"><b>Cvv</b></label>
+                          <div class="form-group">
+                              <input type="text" 
+                              id="cvv" 
+                              formControlName="cvv" class="form-control" 
+                              placeholder="Cvv"
+                              />
+                          </div>
+                      </div>
+
+                    </form>
+                    <hr class="my-4">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="add()">Onayla</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </main>
+          
+          </div>
+
