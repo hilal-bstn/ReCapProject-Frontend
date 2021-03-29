@@ -248,7 +248,7 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rental-list/rental-list.component.ts">rental-list.component.ts</a><br><br>
 				<td>&#128205; <em>Çıktısı: <br>
               
-![rental-list](https://user-images.githubusercontent.com/77468985/112527303-fa201100-8db3-11eb-9633-540e060277e0.png)
+![rental-list2](https://user-images.githubusercontent.com/77468985/112880575-467c9100-90d3-11eb-8027-06a1e935f94d.png)
 
  <br>
 				</ul>
