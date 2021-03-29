@@ -39,6 +39,8 @@
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/singleResponseModel.ts">singleResponseModel.ts</a><br>
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/tokenModel.ts">tokenModel.ts</a><br>
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/loginModel.ts">loginModel.ts</a><br>
+          <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/registerModel.ts">registerModel.ts</a><br>
+
 
    </ul>
   </li>
@@ -80,8 +82,19 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/login/login.component.ts">login.component.ts</a><br><br>
 				<td>&#128205; <em>Çıktısı: <br>
               
- ![login](https://user-images.githubusercontent.com/77468985/112689513-79ccdf00-8e8b-11eb-8439-a3d3a8e710c5.png)
-![login2](https://user-images.githubusercontent.com/77468985/112690335-a6cdc180-8e8c-11eb-8af9-41e0187a12b6.png)
+![loginerror](https://user-images.githubusercontent.com/77468985/112869700-17abee00-90c6-11eb-8542-4d81ec632d48.png)
+![loginsuccess](https://user-images.githubusercontent.com/77468985/112869777-314d3580-90c6-11eb-81b0-dbe24994fab5.png)
+
+  </ul>
+   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/register">register</a><br>
+            <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/register/register.component.css">register.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/register/register.component.html">register.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/register/register.component.ts">register.component.ts</a><br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+ ![registerError](https://user-images.githubusercontent.com/77468985/112870347-c8b28880-90c6-11eb-86be-f28e2ef6b291.png)
+![registersuccess](https://user-images.githubusercontent.com/77468985/112870368-ccdea600-90c6-11eb-9ca2-d6c86198607e.png)
         </ul>
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brand">brand</a><br>
             <ul type="circle">
@@ -246,11 +259,10 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rental/rental.component.ts">rental.component.ts</a><br><br>
 				<td>&#128205; <em>Çıktısı: <br>
               
-![rental](https://user-images.githubusercontent.com/77468985/112521112-2edc9a00-8dad-11eb-948e-fc6f018e127e.png)
+![rental1](https://user-images.githubusercontent.com/77468985/112870588-0ca58d80-90c7-11eb-9d96-ae40d266a6ef.png)
 
  <br>
 				</ul>
-        </ul>
           <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/payment">payment</a><br>
             <ul type="circle">
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/payment/payment.component.css">payment.component.css</a><br>
@@ -258,7 +270,7 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/payment/payment.component.ts">payment.component.ts</a><br><br>
 				<td>&#128205; <em>Çıktısı: <br>
               
-![payment](https://user-images.githubusercontent.com/77468985/112521704-e1acf800-8dad-11eb-8c85-ed789ed0baf3.png)
+![payment](https://user-images.githubusercontent.com/77468985/112870655-19c27c80-90c7-11eb-9baa-aedb35b39411.png)
 
  <br>
 				</ul>
