@@ -32,7 +32,6 @@ export class PaymentComponent implements OnInit {
         this.amount=this.GetTotalDays(params["rentDate"],params["returnDate"],parseInt(params["dailyPrice"]))
         this.rentDate=params["rentDate"]
         this.returnDate=params["returnDate"]
-        console.log(this.amount)
       }
      
     this.createpaymentAddForm();

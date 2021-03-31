@@ -18,7 +18,7 @@
                         <option *ngFor="let color of colors" [ngValue]="color.colorId" >{{color.colorName}}</option>
                       </select></div>
                     <div class="mb-3">
-                        <label for="modelYear">Model Yılı</label>
+                        <label for="modelYear">Araç Çıkış Tarihi</label><!--int yap-->
                         <div class="form-group">
                             <input type="date" 
                             id="modelYear" 
@@ -39,6 +39,14 @@
                             <input type="text" 
                             id="description" 
                             formControlName="description" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description">Aracın Minimum Findeks Puanı</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="FindeksScore" 
+                            formControlName="minimumFindeksScore" class="form-control" />
                         </div>
                     </div>
                  

@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BrandAddComponent } from './components/brand-add/brand-add.component';
-import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
-import { CarAddComponent } from './components/car-add/car-add.component';
-import { CarDetailComponent } from './components/car-detail/car-detail.component';
-import { CarUpdateComponent } from './components/car-update/car-update.component';
-import { CarComponent } from './components/car/car.component';
-import { ColorAddComponent } from './components/color-add/color-add.component';
-import { ColorUpdateComponent } from './components/color-update/color-update.component';
-import { CustomerComponent } from './components/customer/customer.component';
-import { LoginComponent } from './components/login/login.component';
-import { PaymentComponent } from './components/payment/payment.component';
-import { RegisterComponent } from './components/register/register.component';
-import { RentalListComponent } from './components/rental-list/rental-list.component';
-import { RentalComponent } from './components/rental/rental.component';
+import { BrandAddComponent } from './components/brandComponents/brand-add/brand-add.component';
+import { BrandUpdateComponent } from './components/brandComponents/brand-update/brand-update.component';
+import { CarAddComponent } from './components/carComponents/car-add/car-add.component';
+import { CarDetailComponent } from './components/carComponents/car-detail/car-detail.component';
+import { CarUpdateComponent } from './components/carComponents/car-update/car-update.component';
+import { CarComponent } from './components/carComponents/car/car.component';
+import { ColorAddComponent } from './components/colorComponents/color-add/color-add.component';
+import { ColorUpdateComponent } from './components/colorComponents/color-update/color-update.component';
+import { CustomerComponent } from './components/customerComponents/customer/customer.component';
+import { LoginComponent } from './components/authComponents/login/login.component';
+import { PaymentComponent } from './components/rentalComponents/payment/payment.component';
+import { RegisterComponent } from './components/authComponents/register/register.component';
+import { RentalListComponent } from './components/rentalComponents/rental-list/rental-list.component';
+import { RentalComponent } from './components/rentalComponents/rental/rental.component';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [

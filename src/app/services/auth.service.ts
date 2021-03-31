@@ -14,7 +14,6 @@ export class AuthService {
   login(loginModel:LoginModel){
     return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl+"login",loginModel)
   }
-
   isAuthenticated(){
     if(localStorage.getItem("token")){
       return true;

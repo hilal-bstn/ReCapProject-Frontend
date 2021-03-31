@@ -47,7 +47,8 @@ export class CarAddComponent implements OnInit {
       colorId:["",Validators.required],
       modelYear:["",Validators.required],
       dailyPrice:["",Validators.required],
-      description:["",Validators.required]
+      description:["",Validators.required],
+      minimumFindeksScore:["",Validators.required]
     })
     
     console.log(this.carAddForm)

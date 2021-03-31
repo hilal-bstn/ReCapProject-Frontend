@@ -6,28 +6,28 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrandComponent } from './components/brand/brand.component';
-import { ColorComponent } from './components/color/color.component';
-import { NaviComponent } from './components/navi/navi.component';
-import { CarComponent } from './components/car/car.component';
-import { CustomerComponent } from './components/customer/customer.component';
-import { CarDetailComponent } from './components/car-detail/car-detail.component';
+import { BrandComponent } from './components/brandComponents/brand/brand.component';
+import { ColorComponent } from './components/colorComponents/color/color.component';
+import { NaviComponent } from './components/naviComponents/navi/navi.component';
+import { CarComponent } from './components/carComponents/car/car.component';
+import { CustomerComponent } from './components/customerComponents/customer/customer.component';
+import { CarDetailComponent } from './components/carComponents/car-detail/car-detail.component';
 import { FilterBrandPipe } from './pipes/filter-brand.pipe';
 import { FilterColorPipe } from './pipes/filter-color.pipe';
-import { CarFilterComponent } from './components/car-filter/car-filter.component';
-import { RentalListComponent } from './components/rental-list/rental-list.component';
-import { PaymentComponent } from './components/payment/payment.component';
+import { CarFilterComponent } from './components/carComponents/car-filter/car-filter.component';
+import { RentalListComponent } from './components/rentalComponents/rental-list/rental-list.component';
+import { PaymentComponent } from './components/rentalComponents/payment/payment.component';
 
-import { RentalComponent } from './components/rental/rental.component';
+import { RentalComponent } from './components/rentalComponents/rental/rental.component';
 import {ToastrModule} from "ngx-toastr";
-import { BrandAddComponent } from './components/brand-add/brand-add.component';
-import { ColorAddComponent } from './components/color-add/color-add.component';
-import { CarAddComponent } from './components/car-add/car-add.component';
-import { CarUpdateComponent } from './components/car-update/car-update.component';
-import { ColorUpdateComponent } from './components/color-update/color-update.component';
-import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
+import { BrandAddComponent } from './components/brandComponents/brand-add/brand-add.component';
+import { ColorAddComponent } from './components/colorComponents/color-add/color-add.component';
+import { CarAddComponent } from './components/carComponents/car-add/car-add.component';
+import { CarUpdateComponent } from './components/carComponents/car-update/car-update.component';
+import { ColorUpdateComponent } from './components/colorComponents/color-update/color-update.component';
+import { BrandUpdateComponent } from './components/brandComponents/brand-update/brand-update.component';
+import { RegisterComponent } from './components/authComponents/register/register.component';
+import { LoginComponent } from './components/authComponents/login/login.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 @NgModule({
   declarations: [
