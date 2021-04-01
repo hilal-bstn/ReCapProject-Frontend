@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { LoginModel } from '../models/loginModel';
 import { User } from '../models/user';
+import { UserDetailsDto } from '../models/userDetailsDto';
 
 @Injectable({
   providedIn: 'root'
@@ -31,12 +32,12 @@ export class LocalStorageService {
     return false;
   }
 }
-setUser(user: User) 
+setUser(userDetailsDto: UserDetailsDto) 
 {
-  localStorage.setItem(this.currentUser, JSON.stringify(user));
+  localStorage.setItem(this.currentUser, JSON.stringify(userDetailsDto));
 }
 
-getUser(): User 
+getUser(): UserDetailsDto
 {
   return JSON.parse(localStorage.getItem(this.currentUser));
 }

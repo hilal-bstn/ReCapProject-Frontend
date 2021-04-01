@@ -12,7 +12,7 @@ import { BrandService } from 'src/app/services/brand.service';
 })
 export class BrandUpdateComponent implements OnInit {
   brandUpdateForm : FormGroup;
-  brand:Brand[]=[];
+  brand:Brand;
   brandId1:number;
   constructor(private formBuilder:FormBuilder,
     private brandService:BrandService,
@@ -23,7 +23,7 @@ export class BrandUpdateComponent implements OnInit {
     this.activatedRoute.params.subscribe(params=>{
     if(params["brandId"])
     {  this.brandId1=parseInt(params["brandId"]);
-      this.getBrandByBrandId(params["brandId"])
+      this.getBrandByBrandId(params["brandId"]);
       
        
     }
@@ -32,7 +32,7 @@ export class BrandUpdateComponent implements OnInit {
   createBrandUpdateForm(){
     this.brandUpdateForm = this.formBuilder.group({
       brandId: [this.brandId1],
-      brandName: ["",Validators.required],
+      brandName: [this.brand.brandName,Validators.required],
     })
     
  }
@@ -59,6 +59,5 @@ export class BrandUpdateComponent implements OnInit {
  getBrandByBrandId(brandId:Number){
   this.brandService.getBrandsByBrandId(brandId).subscribe(response=>{
     this.brand=response.data;
-    console.log(this.brand)
   });}
 }

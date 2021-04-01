@@ -29,6 +29,9 @@ import { BrandUpdateComponent } from './components/brandComponents/brand-update/
 import { RegisterComponent } from './components/authComponents/register/register.component';
 import { LoginComponent } from './components/authComponents/login/login.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { AuthMenuComponent } from './components/naviComponents/auth-menu/auth-menu.component';
+import { ProfileUpdateComponent } from './components/authComponents/profile-update/profile-update.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +55,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     BrandUpdateComponent,
     RegisterComponent,
     LoginComponent,
+    AuthMenuComponent,
+    ProfileUpdateComponent,
   ],
   imports: [
     BrowserModule,
