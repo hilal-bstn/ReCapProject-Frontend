@@ -1,1 +1,51 @@
-<p>profile-update works!</p>
+
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Profil Bilgilerini Güncelle</h5></div>
+            <div class="card-body">
+                <form  [formGroup]="userUpdateForm" >
+                    <div class="mb-3">
+                        <label for="firstName">Ad</label>
+                        <div class="form-group">
+                            <input type="text"
+                            id="firstName" 
+                            formControlName="firstName" class="form-control" [ngModel]="getCurrentUserDetails().firstName" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName">Soyad</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="lastName" 
+                            formControlName="lastName" class="form-control" [ngModel]="getCurrentUserDetails().lastName" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <div class="form-group">
+                            <input type="email" 
+                            id="email" 
+                            formControlName="email" class="form-control" [ngModel]="getCurrentUserDetails().email"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="companyName">Şirket İsmi</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="companyName" 
+                            formControlName="companyName" class="form-control" [ngModel]="getCurrentUserDetails().companyName"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="mb-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" (click)="update()">Güncelle</button><br>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    
+  </div>

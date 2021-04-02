@@ -38,9 +38,30 @@
             </ul>
     
           </div>
+          <div *ngIf="data!=false">
+            <table class="table">
+              <thead>
+                  <tr>
+                    <th>Kayıtlı kart bilgileriniz</th>
+                    <th></th>
+                    <th></th>
+                      
+                  </tr>
+              </thead>
+          <tbody>
+          <tr *ngFor="let card of userCreditCard">
+              <td><b>Kart Numarası: </b>{{card.cardNumber[0]}}{{card.cardNumber[1]}}{{card.cardNumber[2]}}*********</td>
+              <td><b>Cvv: </b>***</td>
+              <td><button type="button" class="btn btn-primary" (click)="pay()">
+               Öde
+              </button></td>
+          </tr>
+          </tbody>  
+          </table>
+          </div>
           <div class="col-md-7 col-lg-8">
             <form class="needs-validation" novalidate>
-                <form [formGroup]="paymentAddForm">
+                <form [formGroup]="cardAddForm">
                     <div class="mb-3">
                       <label for="cardNumber"><b>Kart Numarası</b></label>
                       <div class="form-group">
@@ -64,7 +85,28 @@
                     </form>
                     <hr class="my-4">
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="add()">Onayla</button>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Onayla
+                      </button>
+                      
+                      
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Kart Bilgileri Kayıt</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Kart bilgilerinizin sistemimize kayıt olmasını ister misiniz?
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="pay()">Kaydetmeden Devam Et</button>
+                              <button type="button" class="btn btn-primary" (click)="add()">Kaydet</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -72,4 +114,5 @@
             </main>
           
           </div>
+
 

@@ -23,6 +23,7 @@ export class AuthMenuComponent implements OnInit {
   }
   logout() {
    this.localStorageService.removeToken();
+   this.localStorageService.removeUser();
    this.toastrService.info("Çıkış yapılıyor..");
    this.router.navigate(['cars']);
  }

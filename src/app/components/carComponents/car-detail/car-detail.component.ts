@@ -3,8 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CarDetailsDto } from 'src/app/models/carDetailsDto';
 import { CarImage } from 'src/app/models/car_image';
+import { UserDetailsDto } from 'src/app/models/userDetailsDto';
 import { CarService } from 'src/app/services/car.service';
 import { CarimageService } from 'src/app/services/carimage.service';
+import { CustomerFindeksScoreService } from 'src/app/services/customer-findeks-score.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 
 @Component({
@@ -16,11 +19,13 @@ export class CarDetailComponent implements OnInit {
   carImages:CarImage[]=[];
   carDetails:CarDetailsDto[]=[];
   apiUrl:string="https://localhost:44351";
-  
+
   dataLoaded=false;
   constructor(private carimageService:CarimageService,
     private activatedRoute:ActivatedRoute,
-    private carService:CarService) { }
+    private carService:CarService,
+    private customerfindeksscore:CustomerFindeksScoreService,
+    private localStorageService:LocalStorageService,private toastrService:ToastrService,) { }
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params=>{
       if(params["carId"])
@@ -28,7 +33,6 @@ export class CarDetailComponent implements OnInit {
          this.getCarImagesByCarId(params["carId"]),
          this.getCarDetailsByCarId(params["carId"])
       }
-      
     })
   }
   getCarImagesByCarId(carId:Number){
@@ -51,4 +55,5 @@ getCarDetailsByCarId(carId:Number){
       return "carousel-item";
     }
   }
+  
 }

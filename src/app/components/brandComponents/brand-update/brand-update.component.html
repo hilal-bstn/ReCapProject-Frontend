@@ -11,22 +11,17 @@
                         <div class="form-group">
                             <input type="text" 
                             id="brandName" 
-                            formControlName="brandName" class="form-control" 
-                            placeholder="Yeni marka ismi giriniz.."/>
+                            formControlName="brandName" class="form-control" [ngModel]="brand.brandName"/>
                         </div>
                     </div>
-                   
-                 
                 </form>
             </div>
             <div class="mb-3">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" (click)="update()" routerLink="/cars">Marka Güncelle</button><br>
+                <button class="btn btn-primary me-md-2" (click)="update()">Marka Güncelle</button><br>
                 <button routerLink="/cars">Vazgeç</button>
             </div>
           </div>
         </div>
-        
     </div>
-    
   </div>

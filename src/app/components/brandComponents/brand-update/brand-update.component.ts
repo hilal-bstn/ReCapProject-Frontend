@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Brand } from 'src/app/models/brand';
 import { BrandService } from 'src/app/services/brand.service';
@@ -14,27 +14,27 @@ export class BrandUpdateComponent implements OnInit {
   brandUpdateForm : FormGroup;
   brand:Brand;
   brandId1:number;
+  brandName:string;
   constructor(private formBuilder:FormBuilder,
     private brandService:BrandService,
     private toastrService:ToastrService,
-    private activatedRoute:ActivatedRoute,) { }
+    private activatedRoute:ActivatedRoute,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params=>{
     if(params["brandId"])
-    {  this.brandId1=parseInt(params["brandId"]);
-      this.getBrandByBrandId(params["brandId"]);
-      
-       
-    }
+    { 
+       this.getBrandByBrandId(params["brandId"]);
+      this.brandId1=parseInt(params["brandId"]);
+     }
   this.createBrandUpdateForm();
   })}
   createBrandUpdateForm(){
     this.brandUpdateForm = this.formBuilder.group({
       brandId: [this.brandId1],
-      brandName: [this.brand.brandName,Validators.required],
+      brandName: ["",Validators.required],
     })
-    
  }
  update(){
   if(this.brandUpdateForm.valid)
@@ -42,6 +42,7 @@ export class BrandUpdateComponent implements OnInit {
     let brandModel = Object.assign({},this.brandUpdateForm.value)
     this.brandService.update(brandModel).subscribe(response=>{
       this.toastrService.success(response.message,"Başarılı")
+      this.router.navigate(["cars"])
     },responseError=>{
       if(responseError.error.Errors.length>0){
         for (let i = 0; i <responseError.error.Errors.length; i++) 
@@ -49,9 +50,7 @@ export class BrandUpdateComponent implements OnInit {
           this.toastrService.error(responseError.error.Errors[i].ErrorMessage,"Doğrulama hatası")
         }       
       } 
-    })}
-  
-    
+    })} 
   else{
     this.toastrService.error("Formunuz eksik","Dikkat")
   }

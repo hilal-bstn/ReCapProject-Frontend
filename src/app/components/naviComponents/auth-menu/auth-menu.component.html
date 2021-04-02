@@ -4,11 +4,10 @@
 </div>
 <li *ngIf="login()" class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    {{getCurrentUserDetails().firstName |titlecase}} {{getCurrentUserDetails().lastName| titlecase}}
+    {{getCurrentUserDetails().firstName |titlecase}} {{getCurrentUserDetails().lastName| titlecase}} 
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <li><a
-       class="dropdown-item">Profil</a></li>
+    <li><a class="dropdown-item" routerLink="/profile-update">Profil</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" (click)="logout()">Çıkış yap</a></li>
   </ul>

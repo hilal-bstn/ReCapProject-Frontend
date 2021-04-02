@@ -31,6 +31,7 @@ import { LoginComponent } from './components/authComponents/login/login.componen
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { AuthMenuComponent } from './components/naviComponents/auth-menu/auth-menu.component';
 import { ProfileUpdateComponent } from './components/authComponents/profile-update/profile-update.component';
+import { ProfileComponent } from './components/authComponents/password-update/profile.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ProfileUpdateComponent } from './components/authComponents/profile-upda
     LoginComponent,
     AuthMenuComponent,
     ProfileUpdateComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

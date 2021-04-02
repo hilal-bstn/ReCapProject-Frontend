@@ -18,7 +18,7 @@ export class BrandService {
     return this.httpClient.get<ListResponseModel<Brand>>(newPath);
 }
 getBrandsByBrandId(brandId:Number):Observable<SingleResponseModel<Brand>> {
-  let newPath=this.apiUrl+"colors/getbyid?id="+brandId
+  let newPath=this.apiUrl+"brands/getbyid?id="+brandId
   return this.httpClient.get<SingleResponseModel<Brand>>(newPath);
 }
 add(brand:Brand):Observable<ResponseModel>{

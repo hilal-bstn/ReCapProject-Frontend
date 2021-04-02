@@ -1,4 +1,4 @@
-export interface payment{
+export interface Payment{
     cardNumber:string,
     cvv:string,
     amount:number,

@@ -5,6 +5,9 @@ import { ToastrService } from 'ngx-toastr';
 import { RentalService } from 'src/app/services/rental.service';
 import { CarDetailsDto } from 'src/app/models/carDetailsDto';
 import { CarimageService } from 'src/app/services/carimage.service';
+import { UserDetailsDto } from 'src/app/models/userDetailsDto';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { CustomerFindeksScoreService } from 'src/app/services/customer-findeks-score.service';
 
 @Component({
   selector: 'app-rental',
@@ -15,14 +18,16 @@ export class RentalComponent implements OnInit {
   rentalAddForm : FormGroup;
    carDetails:CarDetailsDto[]=[];
    car:CarDetailsDto;
+   user:UserDetailsDto;
    carId1:number;
-   amount:number=0;
    dailyPrice:number;
   constructor(private formBuilder:FormBuilder,
     private rentalService:RentalService,
     private toastrService:ToastrService,
     private activatedRoute:ActivatedRoute,
     private carimageService:CarimageService,
+    private localStorageService:LocalStorageService,
+    private customerFindeks:CustomerFindeksScoreService,
     private router:Router
     ) { }
 
@@ -34,6 +39,7 @@ export class RentalComponent implements OnInit {
         this.getCarDetailsByCarId(params["carId"]) ;
         this.dailyPrice=parseInt(params["dailyPrice"]);
      }
+     this.getUser();
     this.createrentalAddForm();
   })
   
@@ -42,7 +48,7 @@ export class RentalComponent implements OnInit {
   createrentalAddForm(){
     this.rentalAddForm = this.formBuilder.group({
       carId: [this.carId1],
-      customerId: ["",Validators.required],
+      customerId: [this.user.customerId,Validators.required],
       rentDate:["", Validators.required],
       returnDate:["",Validators.required]
     })
@@ -53,10 +59,7 @@ export class RentalComponent implements OnInit {
   this.carimageService.getCarDetailsByCarId(carId).subscribe(response=>{
     this.carDetails=response.data;
   });}
-  GetTotalDays(firstDate:Date, lastDate:Date) 
-{
-   return Math.round((lastDate.getTime()- firstDate.getTime()) / (1000 * 60 * 60 * 24));  
-}
+ 
  add(){
   if(this.rentalAddForm.valid)
   { 
@@ -64,7 +67,6 @@ export class RentalComponent implements OnInit {
     this.rentalService.add(rentalModel).subscribe(response=>{
       this.toastrService.success("Araç girdiğiniz tarihlerde uygun")
       this.toastrService.info("Ödeme Sayfasına Yönlendiriliyorsunuz..")
-     // this.amount=this.GetTotalDays(rentalModel.rentDate,rentalModel.returnDate)*this.car.dailyPrice
       this.router.navigate(["payment",this.dailyPrice,rentalModel.rentDate,rentalModel.returnDate])
     },responseError=>{
       this.toastrService.error(responseError.error);
@@ -73,8 +75,13 @@ export class RentalComponent implements OnInit {
   
     
   else{
-    this.toastrService.error("Formunuz eksik","Dikkat")
+    this.toastrService.error("Lütfen Tarih Bilgilerini Girdiğinizden Emin olun","Dikkat")
   }
  }
+ getUser()
+ {
+   this.user=this.localStorageService.getUser();
+ }
+ 
 }
 

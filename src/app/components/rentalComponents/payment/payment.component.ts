@@ -3,8 +3,12 @@ import {FormGroup,FormBuilder, FormControl, Validators} from "@angular/forms"
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CarDetailsDto } from 'src/app/models/carDetailsDto';
+import { UserCreditCard } from 'src/app/models/userCreditCard';
+import { UserDetailsDto } from 'src/app/models/userDetailsDto';
 import { CarimageService } from 'src/app/services/carimage.service';
-import { PaymentService } from 'src/app/services/payment.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { UserCreditCardService } from 'src/app/services/user-credit-card.service';
+
 
 @Component({
   selector: 'app-payment',
@@ -12,18 +16,22 @@ import { PaymentService } from 'src/app/services/payment.service';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-  paymentAddForm : FormGroup;
+  cardAddForm : FormGroup;
   carDetails:CarDetailsDto[]=[];
   dailyPrice:number;
   rentDate:any;
   returnDate:any;
   amount:number=0;
+  user:UserDetailsDto;
+  userCreditCard:UserCreditCard[]=[];
+  data=false;
   constructor(private formBuilder:FormBuilder,
-    private paymentService:PaymentService,
+  private creditCardService:UserCreditCardService,
     private toastrService:ToastrService,
     private activatedRoute:ActivatedRoute,
     private carimageService:CarimageService,
-    private router:Router) { }
+    private router:Router,
+    private localStorageService:LocalStorageService,) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params=>{
@@ -32,8 +40,10 @@ export class PaymentComponent implements OnInit {
         this.amount=this.GetTotalDays(params["rentDate"],params["returnDate"],parseInt(params["dailyPrice"]))
         this.rentDate=params["rentDate"]
         this.returnDate=params["returnDate"]
+       
       }
-     
+      this.getUser();
+      this.getUserCreditCard()
     this.createpaymentAddForm();
   })}
   getCarDetailsByCarId(carId:Number){
@@ -41,10 +51,10 @@ export class PaymentComponent implements OnInit {
       this.carDetails=response.data;
     });}
   createpaymentAddForm(){
-    this.paymentAddForm = this.formBuilder.group({
+    this.cardAddForm = this.formBuilder.group({
+      userId:[this.user.userId,Validators.required],
       cardNumber:["",Validators.required],
       cvv: ["",Validators.required],
-      amount:[this.amount],
     })
  }
  GetTotalDays(firstDate:any, lastDate:any,price:number) 
@@ -53,10 +63,10 @@ export class PaymentComponent implements OnInit {
    return (Math.ceil((lastDate.getTime()- firstDate.getTime()) / (1000 * 60 * 60 * 24)))*price;  
 }
 add(){
-  if(this.paymentAddForm.valid)
+  if(this.cardAddForm.valid)
   { 
-    let paymentModel = Object.assign({},this.paymentAddForm.value)
-    this.paymentService.add(paymentModel).subscribe(response=>{
+    let creditCardModel = Object.assign({},this.cardAddForm.value)
+    this.creditCardService.add(creditCardModel).subscribe(response=>{
       this.toastrService.success(response.message,"Başarılı")
       this.toastrService.info("Ana Sayfaya Yönlendiriliyorsunuz..")
       this.router.navigate(["cars"])
@@ -71,5 +81,22 @@ add(){
     this.toastrService.error("Formunuz eksik","Dikkat")
   }
  }
+ pay()
+ {
+   this.toastrService.success("Ödeme işleminiz başarıyla gerçekleşmiştir.")
+   this.router.navigate(["cars"])
+ }
+ getUser()
+ {
+   this.user=this.localStorageService.getUser();
+  }
+  getUserCreditCard()
+  {
+    
+      this.creditCardService.getByUserId(this.user.userId).subscribe(response=>{
+        this.userCreditCard=response.data;
+        this.data=true;
+      });
+  }
 }
 
