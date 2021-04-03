@@ -21,7 +21,7 @@
 
 ## Models
 
-<b>Bu klasör altındaki typescript dosyaları ReCapProject 'in backend kısmındaki Entities klasöründe bulunan nesnelere karşılık gelmektedir. Bu klasör back-end kısmımızdan bize gelen verilerin düzenlenmesi amacıyla oluşturulmuştur. Back-end kısmındaki Entities Layer kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md#entities-layer"> buradan</a> ulaşabilirsiniz.
+<b>Bu klasör altındaki typescript dosyaları ReCapProject 'in backend kısmındaki Entities klasöründe bulunan nesnelere karşılık gelmektedir. Bu klasör Back-End den gelen ve Front-End den gönderilen verilerin düzenlenmesi amacıyla oluşturulmuştur. Back-end kısmındaki Entities Layer kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md#entities-layer"> buradan</a> ulaşabilirsiniz.
 <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/models">Models</a>
                                 <ul type="circle">
