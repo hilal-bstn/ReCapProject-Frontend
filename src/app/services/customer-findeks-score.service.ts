@@ -12,7 +12,7 @@ export class CustomerFindeksScoreService {
   apiUrl="https://localhost:44351/api/customersfindeksscores/"
   constructor(private httpClient:HttpClient) { }
 
-  checkFindeksScore(carId:Number,customerId:Number) {   
+  checkFindeksScore(carId:Number,customerId:Number):Observable<ResponseModel> {   
     return this.httpClient.get<ResponseModel>(this.apiUrl+"checkFindeksScore?carId="+carId+"&customerId="+customerId );
   }
 }

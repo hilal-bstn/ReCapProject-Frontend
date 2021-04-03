@@ -21,6 +21,7 @@ export class RentalComponent implements OnInit {
    user:UserDetailsDto;
    carId1:number;
    dailyPrice:number;
+   dataLoaded=false;
   constructor(private formBuilder:FormBuilder,
     private rentalService:RentalService,
     private toastrService:ToastrService,
@@ -59,7 +60,7 @@ export class RentalComponent implements OnInit {
   this.carimageService.getCarDetailsByCarId(carId).subscribe(response=>{
     this.carDetails=response.data;
   });}
- 
+ //ödeme türü ekle ona göre add i kartla ödeme sayfasına al
  add(){
   if(this.rentalAddForm.valid)
   { 
@@ -82,6 +83,17 @@ export class RentalComponent implements OnInit {
  {
    this.user=this.localStorageService.getUser();
  }
- 
+ checkFindeks()
+ {
+   this.customerFindeks.checkFindeksScore(this.carId1,this.user.customerId).subscribe((response) => {
+    if (response.success) {
+     this.dataLoaded=true;
+     this.add()
+    }
+    else{
+      this.toastrService.error("Bu araç için yeterli findeks puanına sahip değilsiniz.")
+    } 
+ });
+ }
 }
 
