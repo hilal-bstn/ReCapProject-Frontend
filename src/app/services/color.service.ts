@@ -10,20 +10,20 @@ import { ResponseModel } from '../models/responseModel';
   providedIn: 'root'
 })
 export class ColorService {
-  apiUrl="https://localhost:44351/api/"
+  apiUrl="https://localhost:44351/api/colors/"
   constructor(private httpClient:HttpClient) { }
   getColors():Observable<ListResponseModel<Color>>{
-    let newPath=this.apiUrl+"colors/getall"
+    let newPath=this.apiUrl+"getall"
     return this.httpClient.get<ListResponseModel<Color>>(newPath);
 }
 getColorsByColorId(colorId:Number):Observable<ListResponseModel<Color>> {
-  let newPath=this.apiUrl+"colors/getbyid?id="+colorId
+  let newPath=this.apiUrl+"getbyid?id="+colorId
   return this.httpClient.get<ListResponseModel<Color>>(newPath);
 }
 add(color:Color):Observable<ResponseModel>{
-  return this.httpClient.post<ResponseModel>(this.apiUrl+"colors/add",color)
+  return this.httpClient.post<ResponseModel>(this.apiUrl+"add",color)
 }
 update(color:Color):Observable<ResponseModel>{
-  return this.httpClient.post<ResponseModel>(this.apiUrl+"colors/update",color)
+  return this.httpClient.post<ResponseModel>(this.apiUrl+"update",color)
 }
 }

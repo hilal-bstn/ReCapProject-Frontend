@@ -11,13 +11,13 @@ import { ResponseModel } from '../models/responseModel';
   providedIn: 'root'
 })
 export class RentalService {
-  apiUrl="https://localhost:44351/api/"
+  apiUrl="https://localhost:44351/api/rentals/"
   constructor(private httpClient:HttpClient) { }
   getRentalDetails():Observable<ListResponseModel<RentalDetailsDto>>{
-    let newPath=this.apiUrl+"rentals/getrentaldetails"
+    let newPath=this.apiUrl+"getrentaldetails"
     return this.httpClient.get<ListResponseModel<RentalDetailsDto>>(newPath);
 }
 add(rental:Rental):Observable<ResponseModel>{
-  return this.httpClient.post<ResponseModel>(this.apiUrl+"rentals/add",rental)
+  return this.httpClient.post<ResponseModel>(this.apiUrl+"add",rental)
 }
 }

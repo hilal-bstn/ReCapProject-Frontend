@@ -11,34 +11,34 @@ import { ResponseModel } from '../models/responseModel';
   providedIn: 'root'
 })
 export class CarService {
-  apiUrl="https://localhost:44351/api/"
+  apiUrl="https://localhost:44351/api/cars/"
   constructor(private httpClient:HttpClient) { }
   getCarsDetails():Observable<ListResponseModel<CarDetailsDto>>
-  { let newPath=this.apiUrl+"cars/getcardetails"
+  { let newPath=this.apiUrl+"getcardetails"
     return this.httpClient.get<ListResponseModel<CarDetailsDto>>(newPath);
   }
   getCarsByBrand(brandId:Number):Observable<ListResponseModel<CarDetailsDto>> {
-    let newPath=this.apiUrl+"cars/getcardetailsbybrandid?brandId="+brandId
+    let newPath=this.apiUrl+"getcardetailsbybrandid?brandId="+brandId
     return this.httpClient.get<ListResponseModel<CarDetailsDto>>(newPath);
   }
   getCarsByColor(colorId:Number):Observable<ListResponseModel<CarDetailsDto>> {
-    let newPath=this.apiUrl+"cars/getcardetailsbycolorid?colorId="+colorId
+    let newPath=this.apiUrl+"getcardetailsbycolorid?colorId="+colorId
     return this.httpClient.get<ListResponseModel<CarDetailsDto>>(newPath);
   }
   getCarsByCarId(carId:Number):Observable<ListResponseModel<CarDetailsDto>> {
-    let newPath=this.apiUrl+"cars/getcardetailsbycarid?carId="+carId
+    let newPath=this.apiUrl+"getcardetailsbycarid?carId="+carId
     return this.httpClient.get<ListResponseModel<CarDetailsDto>>(newPath);
   }
   getCarByBrandAndColor(brandId:Number,colorId:Number)
        {
-        let newPath=this.apiUrl+"cars/getcardetailsbybrandidandcolorid?brandId="+brandId+"&colorId="+colorId     
+        let newPath=this.apiUrl+"getcardetailsbybrandidandcolorid?brandId="+brandId+"&colorId="+colorId     
            return this.httpClient.get<ListResponseModel<CarDetailsDto>>(newPath);
        }
   add(car:Car):Observable<ResponseModel>{
-        return this.httpClient.post<ResponseModel>(this.apiUrl+"cars/add",car)
+        return this.httpClient.post<ResponseModel>(this.apiUrl+"add",car)
       }
       update(car:Car):Observable<ResponseModel>{
-        return this.httpClient.post<ResponseModel>(this.apiUrl+"cars/update",car)
+        return this.httpClient.post<ResponseModel>(this.apiUrl+"update",car)
       }
 }
 

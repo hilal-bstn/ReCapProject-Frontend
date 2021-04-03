@@ -60,7 +60,7 @@ export class RentalComponent implements OnInit {
   this.carimageService.getCarDetailsByCarId(carId).subscribe(response=>{
     this.carDetails=response.data;
   });}
- //ödeme türü ekle ona göre add i kartla ödeme sayfasına al
+ //ödeme türü ekle ona göre add i kartla ödeme sayfasına da ekle
  add(){
   if(this.rentalAddForm.valid)
   { 

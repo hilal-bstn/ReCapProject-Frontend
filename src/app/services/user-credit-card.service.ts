@@ -10,13 +10,13 @@ import { UserCreditCard } from '../models/userCreditCard';
   providedIn: 'root'
 })
 export class UserCreditCardService {
-  apiUrl="https://localhost:44351/api/"
+  apiUrl="https://localhost:44351/api/usercreditcards/"
   constructor(private httpClient:HttpClient) { }
   add(creditCart:UserCreditCard):Observable<ResponseModel>{
-    return this.httpClient.post<ResponseModel>(this.apiUrl+"usercreditcards/add",creditCart)
+    return this.httpClient.post<ResponseModel>(this.apiUrl+"add",creditCart)
   }
   getByUserId(Id:Number):Observable<ListResponseModel<UserCreditCard>> {
-    let newPath=this.apiUrl+"usercreditcards/getbyuserid?id="+Id
+    let newPath=this.apiUrl+"getbyuserid?id="+Id
     return this.httpClient.get<ListResponseModel<UserCreditCard>>(newPath);
   }
 }
