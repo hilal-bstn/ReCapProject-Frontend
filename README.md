@@ -54,7 +54,7 @@
 
 ## Services
 
-<b>Services klasörü altındaki dosyalarımız back-endde olan WebAPI kısmına istekte bulunmamızı sağlar. WebAPI alınan isteği back-end kısmımızda bulunan operasyonlara iletir ona karşılık bir sonuç gelir. Her bir typescript dosyası WebAPI de ki bir Controllera denk gelmektedir.  Back-end kısmındaki WebAPI kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md#webapi"> buradan</a> ulaşabilirsiniz. Aşağıdaki bağlantıları kullanarak Services klasörünün detaylarına erişebilirsiniz.
+<b>Services klasörü altındaki dosyalarımız back-endde olan WebAPI kısmına istekte bulunmamızı sağlar. WebAPI alınan isteği back-end kısmımızda bulunan operasyonlara iletir ona karşılık bir sonuç gelir. local-storage.service hariç her bir typescript dosyası WebAPI de ki bir Controllera denk gelmektedir.  Back-end kısmındaki WebAPI kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md#webapi"> buradan</a> ulaşabilirsiniz. Aşağıdaki bağlantıları kullanarak Services klasörünün detaylarına erişebilirsiniz.
 
 <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/services">Services</a>
@@ -76,7 +76,7 @@
 
 ## Components
   
-  <b>Back-end kısmızdan gelen operasyon sonuçlarına göre, bu sonuçların son kullanıcıya nasıl iletilmesi gerektiğini düzenlediğimiz kısım bu klasör altındaki dosyalarımızdır. Aşağıdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
+  <b>Back-end kısmından gelen operasyon sonuçlarına göre, bu sonuçların son kullanıcıya nasıl iletilmesi gerektiğini düzenlediğimiz kısım bu klasör altındaki dosyalarımızdır. Aşağıdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
   
   <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components">Components</a>
