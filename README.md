@@ -316,6 +316,17 @@
 
  <br>
 				</ul>
+        <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/rentalComponents/my-rentals">my-rentals</a><br>
+            <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rentalComponents/my-rentals/my-rentals.component.css">my-rentals.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rentalComponents/my-rentals/my-rentals.component.html">my-rentals.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rentalComponents/my-rentals/my-rentals.component.css">my-rentals.component.ts</a><br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+![myrentals](https://user-images.githubusercontent.com/77468985/114284470-d9fd7c80-9a58-11eb-826b-6254ae851e51.png)
+
+ <br>
+				</ul>
         <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/rentalComponents/rental">rental</a><br>
             <ul type="circle">
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rentalComponents/rental/rental.component.css">rental.component.css</a><br>
