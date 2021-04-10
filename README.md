@@ -43,6 +43,7 @@
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/userCreditCard.ts">userCreditCard.ts</a><br>  
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/userDetailsDto.ts">userDetailsDto.ts</a><br> 
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/userUpdateModel.ts">userUpdateModel.ts</a><br> 
+          <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/passwordUpdate.ts">passwordUpdate.ts</a><br> 
 
 
 
@@ -136,6 +137,15 @@
 				<td>&#128205; <em>Çıktısı: <br>
               
 ![profile-update](https://user-images.githubusercontent.com/77468985/113461605-e749b400-9425-11eb-8d72-2d0ac1346832.png)
+        </ul>
+          <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/authComponents/password-update">Password Update</a><br>
+            <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/authComponents/password-update/password-update.component.css">password-update.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/authComponents/password-update/password-update.component.html">password-update.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/authComponents/password-update/password-update.component.ts">password-update.component.ts</a><br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+![passwordupdate](https://user-images.githubusercontent.com/77468985/114284399-41ff9300-9a58-11eb-82c7-dd7ef3bac525.png)
         </ul>
   </ul>
   </ul>
