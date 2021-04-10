@@ -31,7 +31,9 @@ import { LoginComponent } from './components/authComponents/login/login.componen
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { AuthMenuComponent } from './components/naviComponents/auth-menu/auth-menu.component';
 import { ProfileUpdateComponent } from './components/authComponents/profile-update/profile-update.component';
-import { ProfileComponent } from './components/authComponents/password-update/profile.component';
+import { PasswordUpdateComponent } from './components/authComponents/password-update/password-update.component';
+import { MyRentalsComponent } from './components/rentalComponents/my-rentals/my-rentals.component';
+
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { ProfileComponent } from './components/authComponents/password-update/pr
     LoginComponent,
     AuthMenuComponent,
     ProfileUpdateComponent,
-    ProfileComponent,
+    PasswordUpdateComponent,
+    MyRentalsComponent,
   ],
   imports: [
     BrowserModule,

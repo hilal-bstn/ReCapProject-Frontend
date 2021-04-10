@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LoginModel } from '../models/loginModel';
+import { PasswordUpdate } from '../models/passwordUpdate';
 import { RegisterModel } from '../models/registerModel';
 import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
@@ -31,5 +32,7 @@ export class AuthService {
   update(userUpdateModel:UserUpdateModel):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl+"update",userUpdateModel)
   }
-
+  passwordUpdate(passwordUpdate:PasswordUpdate):Observable<ResponseModel>{
+    return this.httpClient.post<ResponseModel>(this.apiUrl+"passwordupdate",passwordUpdate)
+  }
 }

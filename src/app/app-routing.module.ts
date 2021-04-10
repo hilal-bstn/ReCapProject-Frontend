@@ -16,6 +16,8 @@ import { RentalListComponent } from './components/rentalComponents/rental-list/r
 import { RentalComponent } from './components/rentalComponents/rental/rental.component';
 import { AuthGuard } from './guard/auth.guard';
 import { ProfileUpdateComponent } from './components/authComponents/profile-update/profile-update.component';
+import { PasswordUpdateComponent } from './components/authComponents/password-update/password-update.component';
+import { MyRentalsComponent } from './components/rentalComponents/my-rentals/my-rentals.component';
 
 const routes: Routes = [
   {path:"",component:CarComponent},
@@ -37,6 +39,8 @@ const routes: Routes = [
   {path:"register",component:RegisterComponent},
   {path:"login", component:LoginComponent},
   {path:"profile-update", component:ProfileUpdateComponent},
+  {path:"password-update", component:PasswordUpdateComponent},
+  {path:"my-rentals", component:MyRentalsComponent},
 
  
 ];

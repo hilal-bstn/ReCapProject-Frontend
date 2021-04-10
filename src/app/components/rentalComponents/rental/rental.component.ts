@@ -96,4 +96,3 @@ export class RentalComponent implements OnInit {
  });
  }
 }
-

@@ -1,14 +1,20 @@
-<div *ngIf="!login()" class="collapse navbar-collapse" id="navbarSupportedContent">
+<div *ngIf="!login()" class="d-grid gap-2 d-md-flex justify-content-md-end" id="navbarSupportedContent">
     <li><a class="nav-link active" aria-current="page" routerLink="/login">Giriş yap</a></li>
     <li><a class="nav-link active" aria-current="page" routerLink="/register">Üye ol</a></li>
 </div>
+<div class="justify-content-md-end">
 <li *ngIf="login()" class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
   <b> {{getCurrentUserDetails().firstName |titlecase}} {{getCurrentUserDetails().lastName| titlecase}} </b> 
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
     <li><a class="dropdown-item" routerLink="/profile-update">Profil</a></li>
-    <li><hr class="dropdown-divider"></li>
+    
+    <li><a class="dropdown-item"routerLink="/password-update">Şifre Güncelle</a></li>
+    
+    <li><a class="dropdown-item"routerLink="/my-rentals">Kiralamalarım</a></li>
+   
     <li><a class="dropdown-item" (click)="logout()">Çıkış yap</a></li>
   </ul>
-</li>
+ </li>
+</div>
