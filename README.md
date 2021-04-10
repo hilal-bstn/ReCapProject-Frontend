@@ -103,7 +103,7 @@
 
  <br>	
 				
-    </ul>
+  </ul>
     </ul>
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/authComponents">Auth Components</a><br>
               <ul type="circle">
