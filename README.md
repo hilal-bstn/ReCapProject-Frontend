@@ -79,7 +79,7 @@
   
   <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components">Components</a>
-              <ul type="circle">
+              
   <ul type="circle">
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/naviComponents">Navi Components</a><br>
               <ul type="circle">
@@ -102,7 +102,7 @@
 ![authmenu](https://user-images.githubusercontent.com/77468985/114284013-ad943100-9a55-11eb-8703-621678167326.png)
 
  <br>	
-				</ul>
+				
     </ul>
     </ul>
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/authComponents">Auth Components</a><br>
