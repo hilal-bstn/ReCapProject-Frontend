@@ -94,8 +94,8 @@
         <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/naviComponents/auth-menu">auth-menu</a><br>
             <ul type="circle">
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.css">auth-menu.component.css</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.css">auth-menu.component.html</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.css">auth-menu.component.ts</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.html">auth-menu.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.ts">auth-menu.component.ts</a><br>
             <br><br>
 				<td>&#128205; <em>Çıktısı: <br>
               
