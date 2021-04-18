@@ -1,13 +1,21 @@
+<div class="mb-3">
 <form>
+  <div class="mb-3">
 <label><b>Araç Markası:&emsp;</b></label>
 <select  [(ngModel)]="SelectBrand" class="form-select" aria-label="Default select example" name="brand" id="brand">
     <option *ngFor="let brand of brands" 
     [value]="brand.brandId">{{brand.brandName}}</option>
   </select>
+</div>
+<div class="mb-3">
   <label><b>Araç Rengi:&emsp;</b></label>
   <select [(ngModel)]="SelectColor" class="form-select" aria-label="Default select example" name="color" id="color">
     <option *ngFor="let color of colors" [value]="color.colorId">{{color.colorName}}</option>
   </select>
+</div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <button
   routerLink="/cars/{{SelectBrand}}/{{SelectColor}}" type="button" class="btn btn-primary">Filtrele</button>
+</div>
 </form>
+</div>

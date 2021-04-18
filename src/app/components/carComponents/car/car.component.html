@@ -19,7 +19,7 @@
         {{fltrColor}} aradınız.
       </div>
       
-<div *ngFor="let car of carsDetails|filterBrand:fltrBrand"  class="card text-dark bg-light mb-3" >
+<div *ngFor="let car of carsDetails|filterBrand:fltrBrand|filterColor:fltrColor"  class="card text-dark bg-light mb-3" >
   <div   class="card-header">
     <strong>
       {{car.brandName}} - {{car.modelYear | date: 'yyyy'}}
