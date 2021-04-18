@@ -43,6 +43,7 @@
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/userCreditCard.ts">userCreditCard.ts</a><br>  
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/userDetailsDto.ts">userDetailsDto.ts</a><br> 
           <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/userUpdateModel.ts">userUpdateModel.ts</a><br> 
+          <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/models/passwordUpdate.ts">passwordUpdate.ts</a><br> 
 
 
 
@@ -53,7 +54,7 @@
 
 ## Services
 
-<b>Services klasörü altındaki dosyalarımız back-endde olan WebAPI kısmına istekte bulunmamızı sağlar. WebAPI alınan isteği back-end kısmımızda bulunan operasyonlara iletir ona karşılık bir sonuç gelir. Her bir typescript dosyası WebAPI de ki bir Controllera denk gelmektedir.  Back-end kısmındaki WebAPI kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md#webapi"> buradan</a> ulaşabilirsiniz. Aşağıdaki bağlantıları kullanarak Services klasörünün detaylarına erişebilirsiniz.
+<b>Services klasörü altındaki dosyalarımız back-endde olan WebAPI kısmına istekte bulunmamızı sağlar. WebAPI alınan isteği back-end kısmımızda bulunan operasyonlara iletir ona karşılık bir sonuç gelir. local-storage.service hariç her bir typescript dosyası WebAPI de ki bir Controllera denk gelmektedir.  Back-end kısmındaki WebAPI kısmına <a href="https://github.com/hilal-bstn/ReCapProject/blob/master/README.md#webapi"> buradan</a> ulaşabilirsiniz. Aşağıdaki bağlantıları kullanarak Services klasörünün detaylarına erişebilirsiniz.
 
 <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/services">Services</a>
@@ -75,11 +76,36 @@
 
 ## Components
   
-  <b>Back-end kısmızdan gelen operasyon sonuçlarına göre, bu sonuçların son kullanıcıya nasıl iletilmesi gerektiğini düzenlediğimiz kısım bu klasör altındaki dosyalarımızdır. Aşağıdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
+  <b>Back-end kısmından gelen operasyon sonuçlarına göre, bu sonuçların son kullanıcıya nasıl iletilmesi gerektiğini düzenlediğimiz kısım bu klasör altındaki dosyalarımızdır. Aşağıdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
   
   <tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components">Components</a>
+              
+  <ul type="circle">
+  <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/naviComponents">Navi Components</a><br>
               <ul type="circle">
+                <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/naviComponents/navi">navi</a><br>
+            <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/navi/navi.component.css">navi.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/navi/navi.component.html">navi.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/navi/navi.component.ts">navi.component.ts</a><br>
+            <br><br>
+				</ul>
+        <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/naviComponents/auth-menu">auth-menu</a><br>
+            <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.css">auth-menu.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.html">auth-menu.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.ts">auth-menu.component.ts</a><br>
+            <br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+![navi4](https://user-images.githubusercontent.com/77468985/113462670-b7e97600-942a-11eb-815e-6457d315b608.png)<br>
+![authmenu](https://user-images.githubusercontent.com/77468985/114284013-ad943100-9a55-11eb-8703-621678167326.png)
+
+ <br>	
+				
+  </ul>
+    </ul>
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/authComponents">Auth Components</a><br>
               <ul type="circle">
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/authComponents/login">Login</a><br>
@@ -112,12 +138,21 @@
               
 ![profile-update](https://user-images.githubusercontent.com/77468985/113461605-e749b400-9425-11eb-8d72-2d0ac1346832.png)
         </ul>
+          <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/authComponents/password-update">Password Update</a><br>
+            <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/authComponents/password-update/password-update.component.css">password-update.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/authComponents/password-update/password-update.component.html">password-update.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/authComponents/password-update/password-update.component.ts">password-update.component.ts</a><br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+![passwordupdate](https://user-images.githubusercontent.com/77468985/114284399-41ff9300-9a58-11eb-82c7-dd7ef3bac525.png)
+        </ul>
   </ul>
   </ul>
   <ul type="circle">
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brandComponents">Brand Components</a><br>
               <ul type="circle"> 
-  <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brand">brand</a><br>
+  <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brandComponents/brand">brand</a><br>
             <ul type="circle">
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brandComponents/brand">brand.component.css</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brandComponents/brand/brand.component.html">brand.component.html</a><br>
@@ -266,31 +301,8 @@
 				</ul>
     </ul>
     </ul>
-    <ul type="circle">
-  <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/naviComponents">Navi Components</a><br>
-              <ul type="circle">
-                <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/naviComponents/navi">navi</a><br>
-            <ul type="circle">
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/navi/navi.component.css">navi.component.css</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/navi/navi.component.html">navi.component.html</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/navi/navi.component.ts">navi.component.ts</a><br>
-            <br><br>
-				</ul>
-        <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/naviComponents/auth-menu">auth-menu</a><br>
-            <ul type="circle">
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.css">auth-menu.component.css</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.css">auth-menu.component.html</a><br>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/naviComponents/auth-menu/auth-menu.component.css">auth-menu.component.ts</a><br>
-            <br><br>
-				<td>&#128205; <em>Çıktısı: <br>
-              
-![navi4](https://user-images.githubusercontent.com/77468985/113462670-b7e97600-942a-11eb-815e-6457d315b608.png)<br>
-![navi3](https://user-images.githubusercontent.com/77468985/113462673-bcae2a00-942a-11eb-9826-2943324a16c9.png)
- <br>	
-				</ul>
-    </ul>
-    </ul>
-      <ul type="circle">
+    
+  <ul type="circle">
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/rentalComponents">Rental Components</a><br>
               <ul type="circle">
                 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/rentalComponents/rental-list">rental-list</a><br>
@@ -301,6 +313,17 @@
 				<td>&#128205; <em>Çıktısı: <br>
               
 ![rental-list2](https://user-images.githubusercontent.com/77468985/112880575-467c9100-90d3-11eb-8027-06a1e935f94d.png)
+
+ <br>
+				</ul>
+        <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/rentalComponents/my-rentals">my-rentals</a><br>
+            <ul type="circle">
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rentalComponents/my-rentals/my-rentals.component.css">my-rentals.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rentalComponents/my-rentals/my-rentals.component.html">my-rentals.component.html</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/rentalComponents/my-rentals/my-rentals.component.css">my-rentals.component.ts</a><br><br>
+				<td>&#128205; <em>Çıktısı: <br>
+              
+![myrentals](https://user-images.githubusercontent.com/77468985/114284470-d9fd7c80-9a58-11eb-826b-6254ae851e51.png)
 
  <br>
 				</ul>
