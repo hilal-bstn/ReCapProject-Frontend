@@ -154,7 +154,7 @@
               <ul type="circle"> 
   <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brandComponents/brand">brand</a><br>
             <ul type="circle">
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brandComponents/brand">brand.component.css</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/tree/master/src/app/components/brandComponents/brand.component.css">brand.component.css</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brandComponents/brand/brand.component.html">brand.component.html</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/brandComponents/brand/brand.component.ts">brand.component.ts</a><br><br>
 				<td>&#128205; <em>Çıktısı: <br>
