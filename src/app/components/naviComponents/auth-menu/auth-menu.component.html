@@ -1,6 +1,7 @@
-<div *ngIf="!login()" class="d-grid gap-2 d-md-flex justify-content-md-end" id="navbarSupportedContent">
-    <li><a class="nav-link active" aria-current="page" routerLink="/login">Giriş yap</a></li>
-    <li><a class="nav-link active" aria-current="page" routerLink="/register">Üye ol</a></li>
+<div *ngIf="!login()" class="loginandregister" id="navbarSupportedContent">
+    
+  <a class="btn me-md-2" aria-current="page" routerLink="/login">Giriş yap</a>
+    <a class="btn  me-md-2" aria-current="page" routerLink="/register">Üye ol</a>
 </div>
 <div class="justify-content-md-end">
 <li *ngIf="login()" class="nav-item dropdown">
