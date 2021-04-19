@@ -246,7 +246,7 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/src/app/components/carComponents/car-filter/car-filter.component.ts">car-filter.component.ts</a> <br><br>
 				<td>&#128205; <em>Çıktısı: <br>
               
-![filter](https://user-images.githubusercontent.com/77468985/112491771-b0263380-8d91-11eb-8b9a-ec50cecfef84.png)
+![carfilter](https://user-images.githubusercontent.com/77468985/115229715-0a5dae80-a11c-11eb-8d1a-59a6552f60e4.png)
 
  <br>
             </ul>
